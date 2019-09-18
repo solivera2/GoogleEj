@@ -6,7 +6,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Signin Template · Bootstrap</title>
-    
+    <meta name="google-signin-client_id" content="272996773174-m4arhrldr1gra92focomroo7u9954v55.apps.googleusercontent.com">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
@@ -19,10 +19,10 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
         <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
       </form>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script>
     function onSignIn(googleUser) {
     var profile = googleUser.getBasicProfile();

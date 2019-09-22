@@ -19,7 +19,7 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" onclick="redirect();"></div>
         <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
       </form>      
   <script>
@@ -29,8 +29,10 @@
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    window.location.href = "https://solivera2.github.io/GoogleEj/ejercicio1/listado.html"
   }
+    function redirect(){
+      window.location.href = "https://solivera2.github.io/GoogleEj/ejercicio1/listado.html";
+    }
   </script>
   </body>
 </html>

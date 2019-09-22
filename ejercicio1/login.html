@@ -12,7 +12,7 @@
     <link href="css/login.css" rel="stylesheet">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
-    <body class="text-center" onload="checkClose();">
+    <body class="text-center">
       <form class="form-signin">
         <h1 class="h3 mb-3 font-weight-normal">Ingresar</h1>
         <label for="inputEmail" class="sr-only">Usuario</label>
@@ -20,6 +20,7 @@
         <label for="inputPassword" class="sr-only">Contraseña</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
         <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="signOut();">Sign out</a>
         <p class="mt-5 mb-3 text-muted">© 2017-2019</p>
       </form>      
   <script>
@@ -30,13 +31,11 @@
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
-  function checkClose(){
-    if (self.closed == true){
+  function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
-    console.log('User signed out.');
+      console.log('User signed out.');
     });
-    }
   }
   </script>
   </body>

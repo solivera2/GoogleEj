@@ -34,6 +34,8 @@
     if (auth2.isSignedIn.Ab === true){
       window.location.href = "https://solivera2.github.io/GoogleEj/ejercicio1/listado.html";
     }
+    let usuario = profile.getEmail();
+    sessionStorage.setItem('usuario', usuario);
     signOut();
   }
   function signOut() {

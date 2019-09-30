@@ -1,6 +1,5 @@
 const LIST_URL = "https://api.myjson.com/bins/tpyd7";
 
-
 var showSpinner = function(){
   document.getElementById("spinner-wrapper").display = "block";
 }
